@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+  background-color: rgb(253, 249, 255);
+  text-align: center;
+  margin: 0 25px 25px 25px;
+  font-family: 'Noto Sans', sans-serif;
+  background-color: rgb(26, 26, 26);
+  color: white;
+}
+
+#title-hr {
+  margin: 0 25px;
+}
+
+main {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: 65vh;
+}
+
+/* any section which is a child of main */
+main>section {
+  border: solid 1px;
+  border-radius: 15px;
+  margin-left: 25px;
+  margin-right: 25px;
+  max-width: 62vw;
+  max-height: 55vh;
+  overflow: scroll;
+  padding: 0 25px 25px 25px;
+}
+
+h1{
+  font-size: 48px;
+}
+#description-of-the-algorithm {
+  text-align: center;
+  margin: 25px;
+}
+
+#description-of-the-algorithm p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 19px;
+}
+
+#input-section {
+  background: rgb(34, 34, 34);
+  position: sticky;
+  top: 0;
+  /*  -webkit-box-shadow: 0px 5px 5px -5px black;
+  -moz-box-shadow: 0px 5px 5px -5px black;
+  box-shadow: 0px 5px 5px -5px black;*/
+}
+
+#input-section label, #input-section input, #input-section button {
+  margin: 15px 5px 5px 5px;
+}
+
+#input-section label {
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+}
+
+#input-section input {
+  border: 1px solid rgb(143, 143, 143);
+  border-radius: 10px;
+  font-size: 16px;
+  padding: 5px 10px;
+  background-color: rgb(224, 224, 224);
+}
+
+#input-section button {
+  background-color: rgb(59, 95, 255);
+  border: 1px solid rgb(143, 143, 143);
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px 10px;
+
+}
+
+#n-queens-visualizer-section {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  background-color: hsl(0, 0%, 0%);
+}
+
+#algorithm-visualizer-section{
+  border: solid 1px rgb(0, 0, 0);
+}
+
+#algorithm-visualizer-section::-webkit-scrollbar{
+  width: 8px; /* Shrink scrollbar width */
+  height: 20px;
+}
+
+#algorithm-visualizer-section::-webkit-scrollbar-track{
+  background: transparent; /* Hide scrollbar track */
+}
+
+#algorithm-visualizer-section::-webkit-scrollbar-thumb{
+  background: #66717c; /* Scrollbar color */
+  border-radius: 5px;
+}
+
+#log-section::-webkit-scrollbar{
+  width: 8px; /* Shrink scrollbar width */
+  height: 20px;
+}
+
+#log-section::-webkit-scrollbar-track{
+  background: transparent; /* Hide scrollbar track */
+}
+
+#log-section::-webkit-scrollbar-thumb{
+  background: #66717c; /* Scrollbar color */
+  border-radius: 5px;
+}
+
+
+table {
+  border: solid 1px;
+  border-collapse: collapse;
+  margin: 25px;
+}
+
+tr {
+  border: solid 1px;
+}
+
+td {
+  border: solid 1px;
+  height: 35px;
+  text-align: center;
+  width: 35px;
+}
+
+/* even rows odd columns */
+tr:nth-of-type(2n)>td:nth-of-type(2n+1) {
+  background-color: rgb(104, 0, 0);
+}
+
+/* odd rows even columns */
+tr:nth-of-type(2n+1)>td:nth-of-type(2n) {
+  background-color: rgb(104, 0, 0);
+}
+
+td.blue-background {
+  background-color: rgb(150, 150, 255);
+  
+}
+
+/* paragraphs which do not have a class blue-background  and are inside a section of id log-section*/
+#log-section p:not(p.blue-background) {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+p.blue-background {
+  background-color: rgb(72, 72, 255);
+  color: white;
+  margin-top: 35px;
+  margin-bottom: 5px;
+}
+
+p.blue-background.normal-margin {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+p.red-background {
+  background-color: rgb(255, 64, 51);
+  color: white;
+}
+
+p.green-background {
+  background-color: rgba(0, 255, 128, 0.8);
+  color: rgb(0, 0, 0);
+}
+
+/* first paragraph inside a section of id log-section */
+#log-section p:first-of-type {
+  background: rgb(34, 34, 34);
+  position: sticky;
+  top: 0;
+  margin-top: 10px;
+  /*  -webkit-box-shadow: 0px 5px 5px -5px black;
+  -moz-box-shadow: 0px 5px 5px -5px black;
+  box-shadow: 0px 5px 5px -5px black;*/
+}
+
+/* any anchor tag that is a child of the footer tag */
+footer>a {
+  text-decoration-line: none;
+}
+
+/* any hr tag that is a child of the footer tag */
+footer>hr {
+  margin: 25px;
+  /* margin-left: 25px;
+  margin-right: 25px; */
+}
+
+@media (max-width: 1180px) {
+  main {
+    justify-content: center;
+  }
+
+  #log-section {
+    margin-top: 25px;
+  }
+}
